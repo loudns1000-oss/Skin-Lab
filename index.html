@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Skin Lab">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#EDF4F1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="apple-touch-icon.png">
+<title>Skin Lab</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);
+--bg:#EDF4F1;--sf:#fff;--ink:#15302A;--mu:#51675F;--ln:#CFDDD7;--ac:#B8435A;--as:#F6DDE2;--ok:#2F7A62;--os:#D9EEE6;--wn:#8A5A12;--ws:#F6E9CF;color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1C18;--sf:#18292A;--ink:#E6F0EC;--mu:#9DB3AB;--ln:#2B4040;--ac:#F08CA0;--as:#3A2229;--ok:#7FD1B3;--os:#1B3A31;--wn:#E8C27A;--ws:#3A2F18;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1C18;--sf:#18292A;--ink:#E6F0EC;--mu:#9DB3AB;--ln:#2B4040;--ac:#F08CA0;--as:#3A2229;--ok:#7FD1B3;--os:#1B3A31;--wn:#E8C27A;--ws:#3A2F18;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,-apple-system,sans-serif}
+main{max-width:560px;margin:0 auto;padding:18px 16px calc(96px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+h1{font-size:1.8rem;font-weight:800;letter-spacing:-.02em}h2{font-size:1.2rem;font-weight:800;margin:26px 0 10px}h3{font-size:1rem;font-weight:800}
+.mu{color:var(--mu);font-size:.93rem}.card{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:14px;margin-bottom:10px}
+.row{display:flex;align-items:center;gap:12px}.grow{flex:1}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--sf);border-top:1px solid var(--ln);display:grid;grid-template-columns:repeat(5,1fr);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+nav button{font:inherit;font-size:.78rem;font-weight:700;background:none;border:0;color:var(--mu);padding:8px 2px;border-radius:10px;cursor:pointer}
+nav button[aria-current="page"]{background:var(--ink);color:var(--bg)}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.chk{display:grid;grid-template-columns:30px 1fr;gap:12px;width:100%;text-align:left;font:inherit;color:inherit;background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:12px;margin-bottom:8px;cursor:pointer;align-items:center}
+.box{width:30px;height:30px;border-radius:50%;border:2px solid var(--ln);display:grid;place-items:center;font-weight:800;color:transparent}
+.chk[aria-pressed="true"]{background:var(--os);border-color:var(--ok)}.chk[aria-pressed="true"] .box{background:var(--ok);border-color:var(--ok);color:var(--sf)}
+.chk.star{border-color:var(--ac);border-width:2px}
+.bar{height:10px;background:var(--ln);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ok);border-radius:9px;transition:width .3s}
+.pill{display:inline-block;border-radius:99px;padding:3px 10px;font-size:.82rem;font-weight:700;background:var(--os);color:var(--ok)}.pill.a{background:var(--as);color:var(--ac)}.pill.w{background:var(--ws);color:var(--wn)}
+.sc{display:flex;gap:6px;margin:6px 0 12px}.sc button{flex:1;font:inherit;font-weight:700;padding:10px 0;border-radius:10px;border:1px solid var(--ln);background:var(--sf);color:var(--ink);cursor:pointer}
+.sc button[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:var(--sf)}
+label{font-weight:700;display:block}textarea,input[type=date],input[type=number]{width:100%;font:inherit;color:var(--ink);background:var(--sf);border:1px solid var(--ln);border-radius:10px;padding:10px}
+.btn{font:inherit;font-weight:700;border:0;border-radius:12px;padding:12px 16px;background:var(--ink);color:var(--bg);cursor:pointer}.btn.g{background:var(--sf);color:var(--ink);border:1px solid var(--ln)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.grid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;display:block}
+.ph{border-left:6px solid var(--ok)}.ph.b{border-left-color:var(--ac)}.ph.c{border-left-color:var(--wn)}
+svg text{fill:var(--mu);font:11px "DM Sans",sans-serif}
+details{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:12px 14px;margin-bottom:8px}summary{font-weight:700;cursor:pointer}
+</style>
+</head>
+<body>
+<main id="v"></main>
+<nav id="nav"></nav>
+<script>
+var KEY="suivi-peau-v1",S,tab="today",db=null,cur=null;
+function today(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function cd(){return cur||today()}
+function load(){try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){S=null}if(!S||!S.start){S={start:today(),days:{},photos:[]}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function dd(a,b){return Math.round((new Date(b+"T12:00")-new Date(a+"T12:00"))/864e5)}
+function fr(d){return new Date(d+"T12:00").toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})}
+function day(d){return S.days[d]||(S.days[d]={m:{},s:{}})}
+function info(d){var n=dd(S.start,d),w=Math.floor(n/7)+1;
+ if(w<1)w=1;var azNight=w>=3||(n%2===0);
+ var ph=w<=2?"Phase 1 : Azéane 1 soir sur 2":w<=4?"Phase 2 : Azéane tous les soirs":"Phase 3 : peau habituée";
+ return{n:n,w:w,az:azNight,ph:ph}}
+var MS=[["n","Nettoyant doux ou eau",""],["h","Sérum acide hyaluronique","Sur peau humide, 2 pressions"],["c","Avène Tolérance Hydra-10","Adapte à ta routine maquillage"],["p","Protection solaire SPF 50","Indispensable pour les marques"]];
+function ES(az){var a=[["n","Nettoyant doux","Sèche en tapotant"],["h","Sérum acide hyaluronique","Contre la sécheresse"]];
+ if(az)a.push(["a","ACM Azéane","Petit pois pour tout le visage, zones touchées surtout"]);
+ a.push(["c","Avène Tolérance Hydra-10","Sur tout le visage, après l’Azéane. Cicalfate+ seulement sur les zones sèches ou irritées"]);return a}
+function streak(){var s=0,d=new Date();for(var i=0;i<400;i++){var k=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+ var x=S.days[k],ok=x&&Object.keys(x.s||{}).some(function(z){return x.s[z]});if(ok)s++;else if(i>0)break;d.setDate(d.getDate()-1)}return s}
+function checklist(items,obj,k,star){return items.map(function(it){var on=!!obj[it[0]];
+ return '<button class="chk'+(it[0]===star?' star':'')+'" aria-pressed="'+on+'" data-k="'+k+'" data-i="'+it[0]+'"><span class="box">✓</span><span><b>'+it[1]+'</b><br><span class="mu">'+it[2]+'</span></span></button>'}).join("")}
+function pct(items,obj){var c=items.filter(function(i){return obj[i[0]]}).length;return Math.round(100*c/items.length)}
+function vToday(){var d=cd(),x=day(d),f=info(d),ev=ES(f.az);
+ var p=pct(ev,x.s);
+ return '<h1>Aujourd’hui</h1><p class="mu">'+fr(d)+'</p><div class="card"><label>Jour affiché</label><input type="date" id="cd" value="'+d+'" max="'+today()+'"></div>'+
+ '<div class="card"><div class="row"><div class="grow"><span class="pill '+(f.az?'a':'')+'">Semaine '+f.w+'</span> <b>'+f.ph+'</b></div><div><b>'+streak()+'</b> <span class="mu">soirs d’affilée</span></div></div><div class="bar" style="margin-top:10px"><i style="width:'+p+'%"></i></div></div>'+
+ '<h2>Soir</h2>'+(f.az?'<p class="mu">Ce soir : Azéane.</p>':'<p class="mu">Soir sans Azéane : hydratation seulement.</p>')+checklist(ev,x.s,"s","a")+
+ '<h2>Comment va ma peau ?</h2><div class="card"><label>Rougeurs</label>'+sc("r",x.r)+'<label>Tiraillements</label>'+sc("t",x.t)+'<label>Nouveaux boutons</label><input type="number" id="bn" min="0" max="30" value="'+(x.b==null?"":x.b)+'" placeholder="0"><label style="margin-top:12px">Note</label><textarea id="nt" rows="2" placeholder="Ex : picotements, peau calme…">'+esc(x.note)+'</textarea></div>'}
+function sc(k,v){return '<div class="sc">'+[1,2,3,4,5].map(function(i){return '<button data-sc="'+k+'" data-v="'+i+'" aria-pressed="'+(v===i)+'">'+i+'</button>'}).join("")+'</div><p class="mu" style="margin:-6px 0 12px">1 = calme, 5 = très marqué</p>'}
+function vRoutine(){var f=info(today());
+ var li=function(a){return a.map(function(i,n){return '<li><b>'+i[1]+'</b><br><span class="mu">'+i[2]+'</span></li>'}).join("")};
+ return '<h1>Ma routine</h1><p class="mu">Peu de produits, introduits doucement.</p><h2>Soir avec Azéane</h2><ol class="card" style="padding-left:34px">'+li(ES(true))+'</ol><h2>Soir sans Azéane</h2><ol class="card" style="padding-left:34px">'+li(ES(false))+'</ol>'+
+ '<h2>Calendrier de l’Azéane</h2><div class="card ph"><b>Semaines 1 et 2</b><br><span class="mu">1 soir sur 2. Picotements légers normaux.</span></div><div class="card ph b"><b>Semaines 3 et 4</b><br><span class="mu">Tous les soirs si pas de chauffe ni de peau qui pèle.</span></div><div class="card ph c"><b>Dès la semaine 5</b><br><span class="mu">Tous les soirs suffisent. Résultats visibles après 6 à 8 semaines.</span></div>'+
+ '<h2>Mis de côté pour l’instant</h2><div class="card"><b>Acide glycolique 10 %</b><br><span class="mu">Plus tard : 1 soir par semaine, jamais le même soir que l’Azéane.</span></div><div class="card"><b>Cleanance Comedomed</b><br><span class="mu">Actifs exfoliants : en alternance avec l’Azéane, ou sur les boutons seulement.</span></div><div class="card"><b>Brumes H&amp;T</b><br><span class="mu">Sans effet sur les rougeurs.</span></div>'+
+ '<h2>Ma date de départ</h2><div class="card"><input type="date" id="sd" value="'+S.start+'"><p class="mu">Elle règle la semaine et le rythme de l’Azéane.</p></div>'}
+function entries(){return Object.keys(S.days).sort().filter(function(k){return S.days[k].r}).map(function(k){return{d:k,r:S.days[k].r,t:S.days[k].t,b:S.days[k].b}})}
+function vTrack(){var e=entries(),h='<h1>Suivi</h1>';
+ if(e.length<2)return h+'<div class="card">Remplis « Comment va ma peau ? » dans Aujourd’hui pendant 2 jours pour voir ta courbe.</div>'+stats();
+ var L=e.slice(-30),W=320,H=140,px=function(i){return 28+i*(W-40)/Math.max(1,L.length-1)},py=function(v){return 12+(5-v)*(H-30)/4};
+ var pts=L.map(function(o,i){return px(i)+","+py(o.r)}).join(" ");
+ var sv='<svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="Courbe des rougeurs">'+[1,3,5].map(function(v){return '<line x1="28" x2="'+(W-12)+'" y1="'+py(v)+'" y2="'+py(v)+'" stroke="var(--ln)"/><text x="6" y="'+(py(v)+4)+'">'+v+'</text>'}).join("")+'<polyline fill="none" stroke="var(--ac)" stroke-width="3" stroke-linejoin="round" points="'+pts+'"/>'+L.map(function(o,i){return '<circle cx="'+px(i)+'" cy="'+py(o.r)+'" r="3.5" fill="var(--ac)"/>'}).join("")+'</svg>';
+ var l7=L.slice(-7),pr=L.slice(0,-7),av=function(a){return a.reduce(function(s,o){return s+o.r},0)/a.length},msg="";
+ if(pr.length){var df=av(l7)-av(pr);msg=df<-.3?"Les rougeurs baissent par rapport aux jours précédents. Continue.":df>.3?"Les rougeurs montent : vérifie tiraillements, nouveaux produits, soleil. Reviens à moins d’actifs.":"Stable pour l’instant. Les résultats demandent 6 à 8 semaines."}else msg="Continue quelques jours pour avoir une tendance."
+ return h+'<div class="card"><h3>Rougeurs (1 à 5)</h3>'+sv+'<p><b>'+msg+'</b></p></div>'+stats()}
+function stats(){var ks=Object.keys(S.days),m=0,s=0;ks.forEach(function(k){var x=S.days[k];if(Object.keys(x.m||{}).some(function(z){return x.m[z]}))m++;if(Object.keys(x.s||{}).some(function(z){return x.s[z]}))s++});
+ var bs=entries().filter(function(o){return o.b!=null});var tb=bs.slice(-7).reduce(function(a,o){return a+o.b},0);
+ return '<div class="grid"><div class="card"><b>'+s+'</b><br><span class="mu">soirs faits</span></div><div class="card"><b>'+streak()+'</b><br><span class="mu">soirs d’affilée</span></div><div class="card"><b>'+tb+'</b><br><span class="mu">boutons, 7 derniers suivis</span></div></div>'}
+function vPhotos(){var P=S.photos.slice().sort(function(a,b){return a.date<b.date?-1:1}),h='<h1>Avant / après</h1><p class="mu">Même lumière, même endroit, sans maquillage. Une photo par semaine suffit.</p><div class="card"><button class="btn" id="add">Ajouter une photo</button><input type="file" id="fi" accept="image/*" hidden><p class="mu" id="pm">Les photos restent sur cet appareil.</p></div>';
+ if(!P.length)return h;
+ var a=P[0],b=P[P.length-1];
+ h+='<h2>Première et dernière</h2><div class="grid"><div><img data-id="'+a.id+'" alt="Première photo"><p class="mu">'+fr(a.date)+'</p></div>'+(P.length>1?'<div><img data-id="'+b.id+'" alt="Dernière photo"><p class="mu">'+fr(b.date)+'</p></div>':'')+'</div><h2>Toutes les photos</h2><div class="grid">';
+ P.forEach(function(p){h+='<div><img data-id="'+p.id+'" alt="Photo du '+p.date+'"><div class="row"><span class="mu grow">'+p.date+'</span><button class="btn g" data-del="'+p.id+'" style="padding:6px 10px">Suppr.</button></div></div>'});
+ return h+'</div>'}
+function vGuide(){var t=[["Je n’arrive pas à tenir la routine","Accroche le soir à un geste déjà fixe (brossage de dents). Pose l’Azéane à côté de la brosse. Mets une alarme iPhone « Peau » à l’heure du coucher. Viser 5 soirs sur 7 vaut mieux qu’abandonner."],["Ça pique ou ça chauffe","Passe à 1 soir sur 2, ou mets la crème hydratante avant l’Azéane. Picotements brefs : normaux. Brûlure forte ou gonflement : arrête et demande conseil."],["Ce que je peux ajouter plus tard","Après 4 à 6 semaines calmes : acide glycolique 1 soir par semaine, ou Cleanance sur les boutons. Un seul nouvel actif à la fois, 2 semaines d’écart."],["Mes habitudes qui comptent","SPF tous les jours. Ne pas toucher ni percer les boutons. Taie d’oreiller changée chaque semaine. Écran de téléphone nettoyé."],["Quand voir un dermato","Micro-kystes qui reviennent aux mêmes endroits, douleur, cicatrices qui se creusent, ou pas d’amélioration après 8 à 12 semaines. Il peut prescrire de l’adapalène, plus efficace sur ce point."],["Les marques rouges : à quoi s’attendre","Elles s’estompent en semaines à mois, plus vite avec SPF et sans boutons percés. Sois patiente : ce sont des marques, pas des cicatrices."]];
+ return '<h1>Conseils</h1><p class="mu">Pour tenir dans la durée.</p><h2></h2>'+t.map(function(x){return '<details><summary>'+x[0]+'</summary><p>'+x[1]+'</p></details>'}).join("")+'<h2>Données</h2><div class="card"><button class="btn g" id="rs">Tout effacer</button><p class="mu">Supprime le suivi et les photos de cet appareil.</p></div>'}
+var V={today:vToday,routine:vRoutine,track:vTrack,photos:vPhotos,guide:vGuide},N=[["today","Jour"],["routine","Routine"],["track","Suivi"],["photos","Photos"],["guide","Conseils"]];
+function render(){document.getElementById("nav").innerHTML=N.map(function(n){return '<button data-t="'+n[0]+'"'+(n[0]===tab?' aria-current="page"':'')+'>'+n[1]+'</button>'}).join("");
+ var v=document.getElementById("v");v.innerHTML=V[tab]();bind(v);if(tab==="photos")showImgs(v)}
+function bind(v){document.querySelectorAll("nav button").forEach(function(b){b.onclick=function(){tab=b.dataset.t;render();window.scrollTo(0,0)}});
+ v.querySelectorAll(".chk").forEach(function(b){b.onclick=function(){var x=day(cd());x[b.dataset.k][b.dataset.i]=!x[b.dataset.k][b.dataset.i];save();var y=window.scrollY;render();window.scrollTo(0,y)}});
+ v.querySelectorAll("[data-sc]").forEach(function(b){b.onclick=function(){day(cd())[b.dataset.sc]=+b.dataset.v;save();var y=window.scrollY;render();window.scrollTo(0,y)}});
+ var bn=v.querySelector("#bn");if(bn)bn.onchange=function(){day(cd()).b=bn.value===""?null:+bn.value;save()};
+ var nt=v.querySelector("#nt");if(nt)nt.onchange=function(){day(cd()).note=nt.value;save()};
+ var cdI=v.querySelector("#cd");if(cdI)cdI.onchange=function(){cur=(cdI.value&&cdI.value!==today())?cdI.value:null;render()};
+ var sd=v.querySelector("#sd");if(sd)sd.onchange=function(){if(sd.value){S.start=sd.value;save()}};
+ var rs=v.querySelector("#rs");if(rs)rs.onclick=function(){if(confirm("Tout effacer ?")){try{localStorage.removeItem(KEY);if(db)db.transaction("p","readwrite").objectStore("p").clear()}catch(e){}load();tab="today";render()}};
+ var ad=v.querySelector("#add"),fi=v.querySelector("#fi");if(ad){ad.onclick=function(){fi.click()};fi.onchange=function(){if(fi.files[0])addPhoto(fi.files[0])}}
+ v.querySelectorAll("[data-del]").forEach(function(b){b.onclick=function(){delPhoto(b.dataset.del)}})}
+function openDB(cb){try{var r=indexedDB.open("suivi-peau",1);r.onupgradeneeded=function(){r.result.createObjectStore("p")};r.onsuccess=function(){db=r.result;cb()};r.onerror=function(){cb()}}catch(e){cb()}}
+function showImgs(v){if(!db)return;v.querySelectorAll("img[data-id]").forEach(function(im){try{var q=db.transaction("p").objectStore("p").get(im.dataset.id);q.onsuccess=function(){if(q.result)im.src=q.result}}catch(e){}})}
+function addPhoto(f){var pm=document.getElementById("pm"),u=URL.createObjectURL(f),im=new Image();
+ im.onload=function(){var s=Math.min(1,720/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);
+  var data=c.toDataURL("image/jpeg",.8),id="p"+Date.now();URL.revokeObjectURL(u);
+  if(!db){pm.textContent="Impossible d’enregistrer la photo sur cet appareil.";return}
+  try{var t=db.transaction("p","readwrite");t.objectStore("p").put(data,id);t.oncomplete=function(){S.photos.push({id:id,date:today()});save();render()};t.onerror=function(){pm.textContent="Enregistrement impossible."}}catch(e){pm.textContent="Enregistrement impossible."}};
+ im.onerror=function(){pm.textContent="Image illisible."};im.src=u}
+function delPhoto(id){S.photos=S.photos.filter(function(p){return p.id!==id});save();try{db.transaction("p","readwrite").objectStore("p").delete(id)}catch(e){}render()}
+load();save();openDB(render);render();
+</script>
+</body>
+</html>
